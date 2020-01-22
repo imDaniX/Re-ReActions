@@ -5,8 +5,8 @@ import pro.reactions.activators.storages.Context;
 import pro.reactions.placeholders.PlaceholdersManager;
 
 public final class StoredFlag {
-	private static final FlagsManager flgManager = ReActionsCore.INSTANCE.getFlags();
-	private static final PlaceholdersManager phManager = ReActionsCore.INSTANCE.getPlaceholders();
+	private static final FlagsManager flgManager = ReActionsCore.getFlags();
+	private static final PlaceholdersManager phManager = ReActionsCore.getPlaceholders();
 	private final Flag flag;
 	private final String value;
 	private final boolean invert;

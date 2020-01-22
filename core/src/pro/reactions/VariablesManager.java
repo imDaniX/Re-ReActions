@@ -14,7 +14,7 @@ public class VariablesManager extends ConfigurableObject {
 	private final ConfigurationManager cfgManager;
 
 	public VariablesManager() {
-		cfgManager = ReActionsCore.INSTANCE.getConfiguration();
+		cfgManager = ReActionsCore.getConfiguration();
 	}
 
 	public void saveGeneralVariables(Map<String, String> variables) {

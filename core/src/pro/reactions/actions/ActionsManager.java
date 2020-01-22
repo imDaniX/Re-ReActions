@@ -15,7 +15,7 @@ public class ActionsManager {
 
 	public ActionsManager() {
 		actions = new InsensitiveStringMap<>(true);
-		threader = ReActionsCore.INSTANCE.getThreader();
+		threader = ReActionsCore.getThreader();
 	}
 
 	public boolean register(Action action) {

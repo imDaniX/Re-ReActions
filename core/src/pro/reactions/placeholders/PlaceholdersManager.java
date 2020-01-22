@@ -18,7 +18,7 @@ public class PlaceholdersManager extends ConfigurableObject {
 	private int countLimit;
 
 	public PlaceholdersManager() {
-		cfgManager = ReActionsCore.INSTANCE.getConfiguration();
+		cfgManager = ReActionsCore.getConfiguration();
 		countLimit = 127;
 	}
 

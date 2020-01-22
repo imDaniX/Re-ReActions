@@ -18,7 +18,7 @@ public class LanguageManager extends ConfigurableObject {
 
 	public LanguageManager() {
 		messages = new HashMap<>();
-		this.cfgManager = ReActionsCore.INSTANCE.getConfiguration();
+		this.cfgManager = ReActionsCore.getConfiguration();
 	}
 
 	@Override

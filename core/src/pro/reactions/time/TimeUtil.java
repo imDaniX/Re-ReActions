@@ -8,7 +8,7 @@ import pro.reactions.util.math.NumbersUtil;
 import java.util.regex.Pattern;
 
 public class TimeUtil {
-	private final static RaPlatform platform = ReActionsCore.INSTANCE.getPlatform();
+	private final static RaPlatform platform = ReActionsCore.getPlatform();
 	private final static Pattern TIME_MM_SS = Pattern.compile("\\d+:[0-5][0-9]");
 	private final static Pattern TIME_HH_MM_SS = Pattern.compile("\\d+:[0-5][0-9]:[0-5][0-9]");
 

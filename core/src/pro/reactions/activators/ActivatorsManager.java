@@ -35,9 +35,9 @@ public class ActivatorsManager extends ConfigurableObject {
 		types = new InsensitiveStringMap<>(true);
 		activators = new InsensitiveStringMap<>(false);
 		activatorsByType = new HashMap<>();
-		cfgManager = ReActionsCore.INSTANCE.getConfiguration();
-		actManager = ReActionsCore.INSTANCE.getActions();
-		flgManager = ReActionsCore.INSTANCE.getFlags();
+		cfgManager = ReActionsCore.getConfiguration();
+		actManager = ReActionsCore.getActions();
+		flgManager = ReActionsCore.getFlags();
 	}
 
 	@Override

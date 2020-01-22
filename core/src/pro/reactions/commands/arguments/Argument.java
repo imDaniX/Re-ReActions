@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class Argument {
 	private final static Set<String> NUMBERS = new HashSet<>(Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
-	private final static RaPlatform platform = ReActionsCore.INSTANCE.getPlatform();
+	private final static RaPlatform platform = ReActionsCore.getPlatform();
 
 	private final String argument;
 	private final Set<String> multiple;

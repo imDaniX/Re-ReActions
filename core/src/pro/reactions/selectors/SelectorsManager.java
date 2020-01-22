@@ -19,7 +19,7 @@ public class SelectorsManager {
 
 	public SelectorsManager() {
 		this.selectors = new HashMap<>();
-		this.platform = ReActionsCore.INSTANCE.getPlatform();
+		this.platform = ReActionsCore.getPlatform();
 	}
 
 	public boolean register(Selector selector) {

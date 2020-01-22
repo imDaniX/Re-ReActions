@@ -17,9 +17,9 @@ import java.util.Collections;
 
 @Alias("run")
 public class ExecuteAction implements Action {
-	private static final ActivatorsManager activManager = ReActionsCore.INSTANCE.getActivators();
-	private static final SelectorsManager selManager = ReActionsCore.INSTANCE.getSelectors();
-	private static final ThreadHelper threader = ReActionsCore.INSTANCE.getThreader();
+	private static final ActivatorsManager activManager = ReActionsCore.getActivators();
+	private static final SelectorsManager selManager = ReActionsCore.getSelectors();
+	private static final ThreadHelper threader = ReActionsCore.getThreader();
 	@Override
 	public boolean execute(Context context, String value) {
 		Parameters params = Parameters.fromString(value);

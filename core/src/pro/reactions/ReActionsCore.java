@@ -10,30 +10,29 @@ import pro.reactions.platform.RaPlatform;
 import pro.reactions.platform.ThreadHelper;
 import pro.reactions.selectors.SelectorsManager;
 
-public enum ReActionsCore {
-	INSTANCE;
+public class ReActionsCore {
 
-	private boolean init = false;
-	private RaPlatform platform;
-	private ConfigurationManager cfgManager;
-	private ActionsManager actManager;
-	private FlagsManager flgManager;
-	private ActivatorsManager activManager;
-	private PlaceholdersManager phManager;
-	private SelectorsManager slManager;
-	private ThreadHelper threader;
-	private ModuleManager mdManager;
+	private static boolean init = false;
+	private static RaPlatform platform;
+	private static ConfigurationManager cfgManager;
+	private static ActionsManager actManager;
+	private static FlagsManager flgManager;
+	private static ActivatorsManager activManager;
+	private static PlaceholdersManager phManager;
+	private static SelectorsManager slManager;
+	private static ThreadHelper threader;
+	private static ModuleManager mdManager;
 
-	public void initialize(RaPlatform platform) {
+	public static void initialize(RaPlatform platform) {
 		if(init) throw new IllegalStateException("ReActionsCore is already initialized");
 		if(platform == null) throw new IllegalArgumentException("RaPlatform cannot be null");
-		this.platform = platform;
+		ReActionsCore.platform = platform;
 		ConfigurationManager cfgManager = platform.getConfiguration();
 		if(cfgManager == null) throw new IllegalArgumentException("ConfigurationManager cannot be null");
-		this.cfgManager = cfgManager;
+		ReActionsCore.cfgManager = cfgManager;
 		ThreadHelper threader = platform.getThreader();
 		if(threader == null) throw new IllegalArgumentException("ThreadHelper cannot be null");
-		this.threader = threader;
+		ReActionsCore.threader = threader;
 		actManager = new ActionsManager();
 		flgManager = new FlagsManager();
 		activManager = new ActivatorsManager();
@@ -45,48 +44,48 @@ public enum ReActionsCore {
 		init = true;
 	}
 
-	public boolean isInitialized() {
+	public static boolean isInitialized() {
 		return init;
 	}
 
-	public ThreadHelper getThreader() {
+	public static ThreadHelper getThreader() {
 		checkInit();
 		return threader;
 	}
 
-	public ConfigurationManager getConfiguration() {
+	public static ConfigurationManager getConfiguration() {
 		checkInit();
 		return cfgManager;
 	}
 
-	public ActionsManager getActions() {
+	public static ActionsManager getActions() {
 		checkInit();
 		return actManager;
 	}
 
-	public FlagsManager getFlags() {
+	public static FlagsManager getFlags() {
 		checkInit();
 		return flgManager;
 	}
 
-	public ActivatorsManager getActivators() {
+	public static ActivatorsManager getActivators() {
 		checkInit();
 		return activManager;
 	}
 
-	public PlaceholdersManager getPlaceholders() {
+	public static PlaceholdersManager getPlaceholders() {
 		return phManager;
 	}
 
-	public SelectorsManager getSelectors() {
+	public static SelectorsManager getSelectors() {
 		return slManager;
 	}
 
-	public RaPlatform getPlatform() {
+	public static RaPlatform getPlatform() {
 		return platform;
 	}
 
-	private void checkInit() {
+	private static void checkInit() {
 		if(!init) throw new IllegalStateException("Initialization of ReActionsCore was not called yet");
 	}
 }

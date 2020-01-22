@@ -6,8 +6,8 @@ import pro.reactions.placeholders.PlaceholdersManager;
 import pro.reactions.util.Util;
 
 public final class StoredAction {
-	private static final ActionsManager actManager = ReActionsCore.INSTANCE.getActions();
-	private static final PlaceholdersManager phManager = ReActionsCore.INSTANCE.getPlaceholders();
+	private static final ActionsManager actManager = ReActionsCore.getActions();
+	private static final PlaceholdersManager phManager = ReActionsCore.getPlaceholders();
 	private final Action action;
 	private final String value;
 	private final boolean precompiled;
